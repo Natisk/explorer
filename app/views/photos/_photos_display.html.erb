@@ -27,7 +27,7 @@
       <td><%= photo.latitude %></td>
       <td><%= photo.longitude %></td>
       <td><%= photo.elevation_meters %></td>
-      <td><%= photo.street_view_url ? link_to('See street view', photo.street_view_url, target: '_blank') : '' %></td>
+      <td><%= photo.street_view_url ? link_to('See street view', photo.street_view_url, ) : '' %></td>
       <td class="text-center"><%= photo.view_point_ids.length %></td>
       <% if user_signed_in? && display_vote_column?(controller_name, action_name) %>
         <td class="text-center">
@@ -45,3 +45,41 @@
   <% end %>
   </tbody>
 </table>
+
+<div class="row">
+  <% photos.each_with_index do |photo, index| %>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <%= link_to photo.street_view_url,
+                  target: '_blank' do %>
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <label class="col-form-label">filename</label>
+              <%= photo.file_name %>
+            </li>
+            <li class="list-group-item">
+              <label class="col-form-label">latitude</label>
+              <%= photo.latitude %>
+            </li>
+            <li class="list-group-item">
+              <label class="col-form-label">longitude</label>
+              <%= photo.longitude %>
+            </li>
+            <li class="list-group-item">
+              <label class="col-form-label">elevation</label>
+              <%= photo.elevation_meters %>
+            </li>
+            <li class="list-group-item">
+              <label class="col-form-label">capture date</label>
+              <%= photo.taken_date_time %>
+            </li>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  </div>
+
+</div>
