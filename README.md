@@ -2,7 +2,7 @@
 
 ## Application setup steps
 
-1. Clone the repo: `git clone git@github.com:trekview/explorer.git`
+1. Clone the repo: `git clone git@github.com:Natisk/explorer.git`
 2. Switch to it folder `cd explorer`
 3. Run `bundle install`
 4. Create DB `rails db:create`
@@ -14,6 +14,6 @@
 
 ## User Documentation
 
-Developer documentation for this project is hosted on the Github wiki page for this project at: https://github.com/trekview/explorer/wiki
+Developer documentation for this project is hosted on the Github wiki page for this project at: https://github.com/Natisk/explorer/wiki
 
-It can be cloned separately using `git clone git@github.com:trekview/explorer.wiki.git` or `git clone https://github.com/trekview/explorer.wiki.git`
+It can be cloned separately using `git clone git@github.com:Natisk/explorer.wiki.git` or `git clone https://github.com/Natisk/explorer.wiki.git`
